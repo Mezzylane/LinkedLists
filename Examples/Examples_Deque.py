@@ -1,4 +1,4 @@
-from Deque import Deque
+from LinkedLists.Deque import Deque
 import random
 
 

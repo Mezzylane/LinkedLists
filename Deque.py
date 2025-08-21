@@ -1,4 +1,4 @@
-from Doubly_Linked_List import DoublyLinkedList
+from .Doubly_Linked_List import DoublyLinkedList
 
 
 

@@ -1,4 +1,4 @@
-from Queue import Queue
+from LinkedLists.Queue import Queue
 import random
 
 

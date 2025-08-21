@@ -1,4 +1,4 @@
-from Singly_Linked_List import SinglyLinkedList
+from .Singly_Linked_List import SinglyLinkedList
 
 
 

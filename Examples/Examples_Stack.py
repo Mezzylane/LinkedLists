@@ -1,4 +1,4 @@
-from Stack import Stack
+from LinkedLists.Stack import Stack
 import random
 
 
