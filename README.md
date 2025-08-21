@@ -6,6 +6,10 @@ Objects SinglyLinkedList(), DoublyLinkedList(), Stack(), Queue(), Deque() built 
 
 Ensure you have Python installed. You can download it from [python.org](https://www.python.org/).
 
+## Running Examples
+
+To run example scripts, use the `-m` option so Python treats `LinkedLists` as a package.  
+
 ## Objects and Their Usage
 
 ### Singly Linked List
