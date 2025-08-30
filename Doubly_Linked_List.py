@@ -85,7 +85,7 @@ class DoublyLinkedList:
         return None
     
     
-    def _insert_node_after(self, cur_node, new_node):
+    def __insert_node_after(self, cur_node, new_node):
         """
         Insert the 'new_node' after 'cur_node' in the list.
 
@@ -126,13 +126,13 @@ class DoublyLinkedList:
         cur_node = self.search(cur_data)
         if cur_node is not None:
             new_node = Node(new_data)
-            self._insert_node_after(cur_node, new_node)
+            self.__insert_node_after(cur_node, new_node)
             self.length += 1
             return True
         return False
     
     
-    def _remove_node(self, cur_node):
+    def __remove_node(self, cur_node):
         """
         Remove the specified node.
 
@@ -170,13 +170,13 @@ class DoublyLinkedList:
         """
         node_to_remove = self.search(data_to_remove)
         if node_to_remove is not None:
-            self._remove_node(node_to_remove)
+            self.__remove_node(node_to_remove)
             self.length -= 1
             return True
         return False
     
     
-    def _find_insertion_position_node(self, cur_node, descending):
+    def __find_insertion_position_node(self, cur_node, descending):
         """
         Find the node after which cur_node should be inserted.
 
@@ -218,7 +218,7 @@ class DoublyLinkedList:
         # Everything left of the cur_node is sorted
         while cur_node is not None:
             next_node = cur_node.next # Store reference to the next node (before moving cur_node)
-            position_node = self._find_insertion_position_node(cur_node, descending)              
+            position_node = self.__find_insertion_position_node(cur_node, descending)              
             # If cur_node is already in the correct position, move to the next node
             if cur_node.previous == position_node:
                 cur_node = next_node

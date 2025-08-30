@@ -82,7 +82,7 @@ class SinglyLinkedList:
         return None
     
     
-    def _insert_node_after(self, cur_node, new_node):
+    def __insert_node_after(self, cur_node, new_node):
         """
         Insert the 'new_node' after 'cur_node' in the list.
 
@@ -119,13 +119,13 @@ class SinglyLinkedList:
         cur_node = self.search(cur_data)
         if cur_node is not None:
             new_node = Node(new_data)
-            self._insert_node_after(cur_node, new_node)
+            self.__insert_node_after(cur_node, new_node)
             self.length += 1
             return True
         return False
     
     
-    def _remove_node_after(self, cur_node):
+    def __remove_node_after(self, cur_node):
         """
         Remove the node immediately following the specified current node.
 
@@ -165,7 +165,7 @@ class SinglyLinkedList:
         cur_node = self.head
         while cur_node is not None: # Linear search
             if cur_node.data == data_to_remove:
-                self._remove_node_after(prev_node)
+                self.__remove_node_after(prev_node)
                 self.length -= 1
                 return True
             prev_node = cur_node # Track the previous node
@@ -173,7 +173,7 @@ class SinglyLinkedList:
         return False
     
     
-    def _find_insertion_position_node(self, key, descending):
+    def __find_insertion_position_node(self, key, descending):
         """
         Find the node after which a new node with the specified key should be inserted.
 
@@ -218,7 +218,7 @@ class SinglyLinkedList:
             if (cur_node.data >= sorted_tail.data and not descending) or (cur_node.data <= sorted_tail.data and descending):
                 sorted_tail = cur_node # Extend the sorted portion
             else:
-                position_node = self._find_insertion_position_node(cur_node.data, descending)
+                position_node = self.__find_insertion_position_node(cur_node.data, descending)
                 sorted_tail.next = next_node # Remove cur_node from its current position
                 if cur_node == self.tail: # If cur_node was the tail, update self.tail
                     self.tail = sorted_tail
